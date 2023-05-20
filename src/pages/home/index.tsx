@@ -25,6 +25,7 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
+  Techs,
 } from "./style";
 
 import React, { useState, useEffect } from "react";
@@ -53,7 +54,7 @@ return <>{text}</>;
 
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio`;
 
   return (
     <main id="home">
@@ -95,6 +96,7 @@ export const Home = (): JSX.Element => {
                 <FaGithub />
               </Button>
             </HeaderButtonsArea>
+            <Techs>Minha Stack</Techs>
             <StackCards>
               {stackData.map((stack, index) => (
                 <Stack key={index} title={stack.title} icon={stack.img} />

@@ -87,22 +87,24 @@ const { mode } = useContext(BlackWhiteContext);
 
   const theme = createTheme({
     colors: {
-      brand1: "#623CEA",
-      brand2: "#311E75",
+      // brand1: "#623CEA",
+      // brand2: "#311E75",
+      brand1: "#08A39A",
+      brand2: "#08A39A",
 
-      grey0: mode? "#0A0A0B" : "#eee;",
-      grey1: mode? "#121214" : "#ffffff",
-      grey2: mode? "#868E96" : "#121214",
-      grey3: mode? "#E9ECEF" : "#121214",
-      grey4: mode? "#F8F9FA" : "#121214",
-      grey5: mode? "#F8F9FA" : "#121214",
+      grey0: !mode? "#0A0A0B" : "#eee;",
+      grey1: !mode? "#121214" : "#ffffff",
+      grey2: !mode? "#868E96" : "#121214",
+      grey3: !mode? "#E9ECEF" : "#121214",
+      grey4: !mode? "#F8F9FA" : "#121214",
+      grey5: !mode? "#F8F9FA" : "#121214",
 
       socialInstagram: "#CF50AC",
       socialFacebook: "#506CCF",
       socialLinkedin: "#0E76A8",
 
       whiteFixed:"#ffffff",
-      mode: mode? "#ffffff" : "#121214",
+      mode: !mode? "#ffffff" : "#121214",
     },
     sizes: {
       container: "75rem",

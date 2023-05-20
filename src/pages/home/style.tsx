@@ -60,12 +60,21 @@ export const StackSection = styled("div", {
   padding: "4rem 0 2rem 0",
 });
 
+export const Techs = styled("h1",{
+  marginTop: "$5",
+  color: "$grey5",
+  textAlign: "flex-start",
+  fontSize: "$title1",
+  "@mobile": {
+    fontSize: "$title2",
+  }
+})
+
 export const StackCards = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   padding: "3rem 0",
   gap: "6rem",
-  marginTop: "$4",
 
   "@tablet": {
     gridTemplateColumns: "1fr 1fr 1fr",

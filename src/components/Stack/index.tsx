@@ -26,7 +26,7 @@ export const Stack = (
         <img src={Icon} alt={title} title={title} height="84px" width="84px" />
       ) : (
         // <Icon size={84} color="#868E96" /> //aqui vai ser mudado para preto
-        <Icon size={84} color={mode? "#868E96" : "#623CEA"} /> //aqui vai ser mudado para preto
+        <Icon size={84} color="#08A39A" /> //aqui vai ser mudado para preto
       )}
     </StackCard>
   );

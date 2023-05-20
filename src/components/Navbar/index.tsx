@@ -21,6 +21,7 @@ export interface MenuButtonOpen {
   setOpen: (value: Boolean) => void;
 }
 
+
 export const NavBar = (): JSX.Element => {
 
   const isWide = useMedia({ maxWidth: "991px" });
@@ -67,8 +68,6 @@ export const NavLinks = (): JSX.Element => {
     mode? setMode(false) : setMode(true)
   };
 
-
-
   return (
     <NavbarLinks>
       <Button type="btLink" as="a" color="grey4" href={`#home`}>
@@ -83,7 +82,7 @@ export const NavLinks = (): JSX.Element => {
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         Redes Sociais
       </Button>
-      <Button type={mode? "toggleTheme" : "darkMode"} onClick={handleClick}>
+      <Button type={!mode? "toggleTheme" : "darkMode"} onClick={handleClick}>
       </Button>
     </NavbarLinks>
   );

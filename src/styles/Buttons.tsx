@@ -2,6 +2,7 @@ import { styled } from "@/styles/stitches.config";
 import { colors } from "@/styles/Global";
 
 export const Button = styled("button", {
+
   height: "3rem",
   appearance: "none",
   background: "$whiteFixed",
@@ -60,20 +61,20 @@ export const Button = styled("button", {
         color: "$grey4",
         backgroundColor: "transparent",
         position: "relative",
+
         "&::before": {
           content: "",
           width: "1.5rem",
           height: "1.5rem",
           backgroundColor: "$grey4",
           position: "absolute",
-          left: "0.25rem",
           borderRadius: "50%",
+          left: "0.25rem",
         },
         "&::after": {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
-
           content: "🌙",     
           height: "100%",
           width: "100%",
@@ -82,7 +83,7 @@ export const Button = styled("button", {
           position: "absolute",
           borderRadius: "50%",
         },
-
+        
         "@mobile": {
           position: "absolute",
           right: "5rem",
@@ -187,7 +188,6 @@ export const Button = styled("button", {
           position: "absolute",
           borderRadius: "50%",
         },
-  
         "@mobile": {
           position: "absolute",
           right: "5rem",
