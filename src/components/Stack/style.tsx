@@ -3,13 +3,12 @@ import { keyframes } from "@stitches/react";
 import { Text } from "../../styles/Text";
 
 export const scaleUp = keyframes({
-  "0%": { transform: "translateY(15%)" },
-  "100%": { transform: "translateY(-140%)" },
+  "30%": { transform: "translateY(-80%)" },
+  "50%": { transform: "translateY(-140%)" },
 });
 
 export const StackCard = styled("div", {
   borderRadius: "$1",
-  background: "transparent",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -47,16 +46,15 @@ export const StackCard = styled("div", {
   },
 
   "&:hover": {
-        transform: "rotate(360deg)",
-        transition: "transform 0.5s ease-in-out",
+    transform: "scale(1.2)",
+    transition: "transform 0.3s ease",
 
     [`& ${Text}`]: {
       opacity: 1,
       top: 0,
       transform: "translateY(-140%)",
-      animation: `${scaleUp} 2000ms`,
+      animation: `${scaleUp} 2s`,
     },
-  },
-
+  }
 });
 

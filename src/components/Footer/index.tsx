@@ -5,7 +5,6 @@ import { UserImage } from "@/pages/home/style";
 import { userData } from "@/utils/userData";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Button } from "@/styles/Buttons";
-// import { HandEffect } from "../HandEffect";
 
 export const Footer = (): JSX.Element => {
   return (
@@ -20,12 +19,9 @@ export const Footer = (): JSX.Element => {
             height={"70px"}
           />
           <Box css={{ marginLeft: "$2" }}>
-            <Text type="heading4" color="grey5" css={{ marginBottom: "$2" }}>
-             May the force be with you! {/* <HandEffect /> */}
+            <Text type="heading3" color="grey5" css={{ marginBottom: "$2" }}>
+             May the force be with you! 
             </Text>
-            {/* <Text type="body1" color="grey2">
-              Contact me também pelas redes sociais
-            </Text> */}
           </Box>
         </Flex>
         <Flex

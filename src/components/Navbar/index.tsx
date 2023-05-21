@@ -8,6 +8,7 @@ import {
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
+  NavbarWhite
 } from "./style";
 
 import { FaBars } from "react-icons/fa";
@@ -24,6 +25,8 @@ export interface MenuButtonOpen {
 
 export const NavBar = (): JSX.Element => {
 
+  const { mode, setMode } = useContext(BlackWhiteContext);
+
   const isWide = useMedia({ maxWidth: "991px" });
 
   document.title = userData.nameUser;
@@ -35,7 +38,8 @@ export const NavBar = (): JSX.Element => {
   };
 
   return (
-    <NavbarWrapper>
+    <>
+    {!mode?( <NavbarWrapper>
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
@@ -55,7 +59,31 @@ export const NavBar = (): JSX.Element => {
           {isWide ? open && <NavLinks /> : <NavLinks />}
         </Flex>
       </Container>
-    </NavbarWrapper>
+    </NavbarWrapper>) 
+    : 
+    ( <NavbarWhite>
+      <Container>
+        <NavbarMobileArea>
+          <LogoTipo>
+            <LogoTipoText>{userData.nameUser}</LogoTipoText>
+          </LogoTipo>
+          {isWide && (
+            <Button
+              type="icon"
+              onClick={OpenMenu}
+              aria-label={!open ? "Abrir Menu" : "Fechar Menu"}
+            >
+              {!open ? <FaBars /> : <IoClose />}
+            </Button>
+          )}
+        </NavbarMobileArea>
+        <Flex>
+          {isWide ? open && <NavLinks /> : <NavLinks />}
+        </Flex>
+      </Container>
+    </NavbarWhite>)}
+   
+    </>
   );
 };
 

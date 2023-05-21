@@ -90,7 +90,7 @@ const { mode } = useContext(BlackWhiteContext);
       // brand1: "#623CEA",
       // brand2: "#311E75",
       brand1: "#08A39A",
-      brand2: "#08A39A",
+      brand2: "#107D77",
 
       grey0: !mode? "#0A0A0B" : "#eee;",
       grey1: !mode? "#121214" : "#ffffff",

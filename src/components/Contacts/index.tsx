@@ -45,7 +45,7 @@ export const Contacts = () => {
                 <FaWhatsapp color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
-                <Text type="heading4" color="grey4">
+                <Text type="heading3" color="grey4">
                   My Whatsapp
                 </Text>
                 <Text color="grey2" type="body2">
@@ -69,7 +69,7 @@ export const Contacts = () => {
                 <FaEnvelopeOpen color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
-                <Text type="heading4" color="grey4">
+                <Text type="heading3" color="grey4">
                   My email
                 </Text>
                 <Text color="grey2" type="body2">
@@ -95,7 +95,7 @@ export const Contacts = () => {
                 <FaLinkedin color="#fff" size={24} />
               </ContactCardImage>
               <ContactCardContent>
-                <Text type="heading4" color="grey4">
+                <Text type="heading3" color="grey4">
                   My LinkedIn
                 </Text>
                 <Text color="grey2" type="body2">
