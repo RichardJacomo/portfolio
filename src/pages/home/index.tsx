@@ -31,6 +31,7 @@ import {
 
 import React, { useState, useEffect, useContext } from "react";
 import { BlackWhiteContext } from "@/contexts/BlackWhiteProvider.";
+import { Mouse } from "@/components/Mouse";
 
 export const TextAnimation = () => {
   const [text, setText] = useState("");
@@ -58,17 +59,14 @@ export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio`;
   const { mode } = useContext(BlackWhiteContext);
-  const [isMobile, setIsMobile] = useState(false);
 
   const mediaQuery = window.matchMedia("(max-width: 800px)");
-  // useEffect(() => {
-  //   setIsMobile(mediaQuery.matches)
-  // }, []);
 
   return (
     <main id="home">
       {!mode && !mediaQuery.matches? (
-      <Header>
+        <Header>
+          <Mouse/>
         <Container>
           <HeaderContent>
             <Flex>
@@ -120,9 +118,11 @@ export const Home = (): JSX.Element => {
             </StackCards>
           </HeaderContent>
         </Container>
-      </Header>)
+      </Header>
+      )
       :
-      (<HeaderWhite>
+      (
+      <HeaderWhite>
         <Container>
           <HeaderContent>
             <Flex>
@@ -174,7 +174,9 @@ export const Home = (): JSX.Element => {
             </StackCards>
           </HeaderContent>
         </Container>
-      </HeaderWhite>)}
+      </HeaderWhite>
+
+      )}
 
       <ProjectsArea id="projects">
         <Container>
@@ -194,3 +196,4 @@ export const Home = (): JSX.Element => {
     </main>
   );
 };
+

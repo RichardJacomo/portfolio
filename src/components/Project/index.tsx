@@ -33,12 +33,12 @@ export const Project = (): JSX.Element => {
       const json = await data.json();
 
       setRepositories(json);
-
       return json;
     };
 
     fetchData();
   }, []);
+
 
   return (
     <>
