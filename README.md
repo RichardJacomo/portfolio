@@ -12,7 +12,7 @@ Para visualizar meu Portfólio diretamente no navegador, basta clicar no link ab
 
 ## Tecnologias Utilizadas
 
-* Typescript, React.js, Styled Components e algumas bibliotecas
+* Typescript, React.js, Stitches e algumas bibliotecas
 
 
 ## Contribuições e Contato
